@@ -17,7 +17,7 @@ public Car() {
     super();
 }
 
-    public Car(String name, int wheels, String type, int doors, int gears, boolean isManual, int currentGear, int seats) {
+    public Car(String name, int wheels,  int doors, int gears, boolean isManual, String type, int seats) {
         super();
         this.wheels = wheels;
         this.type = type;
@@ -34,7 +34,7 @@ public Car() {
 //    }
 
     public Car(String name) {
-        super();
+        super(name);
     }
 
 
