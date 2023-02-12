@@ -12,6 +12,8 @@ public class Vehicle {
             currentSpeed=0;
     }
 
+    public Vehicle(){}
+
     public String getName() {
         return name;
     }

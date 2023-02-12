@@ -8,7 +8,7 @@ public class F1 extends Car {
     }
 
     public void accelerate(int rate){
-        int newSpeed = 0; //set the value of new speed by using currentSpeed and rate
+        int newSpeed = getCurrentSpeed()+rate; //set the value of new speed by using currentSpeed and rate
         /**
          * speed 0: gear 1
          * speed 1-50: gear 1
@@ -25,30 +25,30 @@ public class F1 extends Car {
         }
         //for all other cases, change the gear accordingly
 
-        if(newSpeed > 0 && newSpeed<=50) {
+       else if(newSpeed > 0 && newSpeed<=50) {
             changeSpeed(newSpeed, getCurrentDirection());
             setCurrentGear(1);
         }
-        if(newSpeed > 50 && newSpeed<=100) {
+        else if(newSpeed > 50 && newSpeed<=100) {
             changeSpeed(newSpeed, getCurrentDirection());
             setCurrentGear(2);
         }
-        if(newSpeed >100 && newSpeed<=150) {
+        else if(newSpeed >100 && newSpeed<=150) {
             changeSpeed(newSpeed, getCurrentDirection());
             setCurrentGear(3);
         }
 
-        if(newSpeed > 150 && newSpeed<=200) {
+        else if(newSpeed > 150 && newSpeed<=200) {
             changeSpeed(newSpeed, getCurrentDirection());
             setCurrentGear(4);
         }
 
-        if(newSpeed > 200 && newSpeed<=250) {
+        else if(newSpeed > 200 && newSpeed<=250) {
             changeSpeed(newSpeed, getCurrentDirection());
             setCurrentGear(5);
         }
 
-        if(newSpeed > 250 ) {
+        else if(newSpeed > 250 ) {
             changeSpeed(newSpeed, getCurrentDirection());
             setCurrentGear(6);
         }
@@ -56,11 +56,5 @@ public class F1 extends Car {
 
     }
 
-//    public int getCurrentDirection() {
-//        return currentDirection;
-//    }
-//
-//    public void setCurrentDirection(int currentDirection) {
-//        this.currentDirection = currentDirection;
-//    }
+
 }
